@@ -2,8 +2,7 @@
 
 ## Screenshots
 
-<img src="./ss/1.png" width=400>
-<img src="./ss/2.png" width=400>
+<img src="./ss/1.png" width=300> <img src="./ss/2.png" width=300>
 
 ##  Installation
 Clone this repository in your chrome folder:
@@ -27,6 +26,6 @@ You may also want to set a different font:
         font-size: 14px !important;
         font-family: monospace !important;
     }
-``
+```
 
 
