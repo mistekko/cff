@@ -1,0 +1,14 @@
+#PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon, /* bookmark icons */
+#OtherBookmarks
+{ display: none !important; }
+
+#navigator-toolbox { border-bottom: 0px !important; } /* take red pill */
+#PersonalToolbar { padding-inline: 0px !important; }
+toolbarbutton.bookmark-item {
+    margin: 0px !important; /* asphyxiate them */
+    height: 24px !important;
+}
+toolbarbutton#PlacesChevron {
+    margin: 0px !important;
+    padding: 0px !important
+}

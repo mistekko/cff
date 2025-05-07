@@ -1,0 +1,79 @@
+/* menu and dialogue modifications */
+:root {
+    --panel-subview-body-padding-block: 0px !important;
+    --panel-separator-margin-horizontal: 0px !important;
+    --arrowpanel-menuitem-border-radius: 0px !important;
+    --arrowpanel-menuitem-margin: 0px !important;
+    --arrowpanel-border-radius: 0px !important; /* right-click menu */
+    --arrow-panel-padding: 0px !important;
+    --panel-padding: 0px !important;
+    --panel-padding-block: 0px !important;
+    --panel-border-radius: 0px !important;
+    --panel-shadow-margin: 0px !important;
+    --border-radius-small: 0px !important;
+    --size-item-large: 14px !important;
+    --focus-outline: none !important;
+}
+
+menupopup, /* context menu */
+panel, /* other menus */
+.panel-footer,
+.footer-button,
+#unified-extensions-manage-extensions, /* addons/extension menu container */
+unified-extensions-item /* ext. menu item */
+{ margin: 0px !important; }
+
+menuitem ,
+.footer-button,
+#editBMPanel_namePicker, /* edit bookmark menu */
+.editBMPanel_folderRow, /* edit bookmark location label */
+#editBookmarkPanelContent /* edit bookmark input box */
+{ padding: 0px !important; }
+
+.subviewbutton > image, /* empty space (icon lacuna) in menus */
+box.panel-header, /* menu header */
+#unified-extensions-view > toolbarseparator:nth-child(2), /* ext. menu line */
+#context-navigation,
+#context-sep-navigation,
+#editBMPanel_tagsRow,
+#editBookmarkPanelInfoArea,
+#editBookmarkPanelBottomContent,
+#editBookmarkHeaderSeparator,
+#editBookmarkSeparator,
+#editBMPanel_foldersExpander, /* extra bookmark edit menu button */
+.unified-extensions-item-message-deck, /* "Can always read and change..." */
+.unified-extensions-item-menu-button, /* ext. item right-side bloat */
+#editBookmarkPanelContent > label
+{ display: none !important; }
+
+menupopup {
+    color-scheme: dark !important;
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
+    --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
+}
+
+menupopup, panel { --panel-border-radius: 0px !important; }
+
+#editBMPanel_folderMenuList { border-radius: 0px !important; }
+
+.unified-extensions-item-action-button,
+#editBMPanel_folderMenuList {
+    padding-block: 0px !important;
+    padding: 0px !important;
+}
+
+#editBMPanel_namePicker,
+&::part(content) /* extension menu bloat element */
+{ border: none !important; }
+
+.unified-extensions-item
+{ margin-block: 0px !important; } /* vertical margin */
+
+.footer-button > hbox { padding-right: 4px !important; } /* remove/save button spacing */
+.footer-button {
+    margin-top: 0px !important;
+    font-weight: 400 !important;
+}
+
+#editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
