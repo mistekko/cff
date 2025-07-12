@@ -28,6 +28,8 @@ You may also want to set a different font:
 }
 ```
 
+Lastly, I recommend customising the toolbar to remove the superfluous and useless items. To enter the necessary menu, right click any unused space on the toolbar and press `Alt-c` or click "Customise Toolbar...". 
+
 ## The future
 This theme is still rather rough. Expect many improvements, but don't expect them to come quickly.
 

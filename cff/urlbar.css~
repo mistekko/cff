@@ -9,7 +9,6 @@
 }
 
 vbox.urlbarView,
-#urlbar-searchmode-switcher,
 #urlbar-go-button,
 #back-button,
 #forward-button

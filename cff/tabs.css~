@@ -10,12 +10,10 @@ toolbarbutton#alltabs-button, /* remove tab list dropdown */
 stack.tab-icon-stack, /* tab icons */
 #tabbrowser-arrowscrollbox-periphery, /* new tab button */
 .tab-close-button, /* close tab button */
-.titlebar-spacer,
-toolbarbutton#scrollbutton-down, /* tab (horizontal) scroll button */
+toolbarbutton#scrollbutton-down, /* too many tab scroll button */
 toolbarbutton#scrollbutton-up /* the above */
 { display: none !important; }
 
 .tab-label-container { height: 24px !important; }
 .tab-audio-button { margin-inline-end: 0px !important; } /* "mute tab" button */
 .tab-text { padding-left: 4px !important; } /* tab label */
-.titlebar-button { padding: 0px !important; } /* shrink windows controls on windows */
