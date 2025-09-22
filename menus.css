@@ -33,6 +33,7 @@ menuitem ,
 .subviewbutton > image, /* empty space (icon lacuna) in menus */
 box.panel-header, /* menu header */
 #unified-extensions-view > toolbarseparator:nth-child(2), /* ext. menu line */
+toolbarseparator, /* useless lines in menus */
 #context-navigation,
 #context-sep-navigation,
 #editBMPanel_tagsRow,
