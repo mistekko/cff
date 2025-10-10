@@ -19,6 +19,7 @@ stack.tab-icon-stack, /* tab icons */
 .tab-audio-button { margin-inline-end: 0px !important; } /* "mute tab" button */
 .tab-text { padding-left: 4px !important; } /* tab label */
 .titlebar-button { padding: 6px 9px !important; } /* shrink windows controls on windows */
+/* tested only on Windows as of 10-10-2025 */
 .titlebar-min { content: "-" !important; }
 .titlebar-max { content: "+" !important; }
 .titlebar-close { content: "x" !important; }
