@@ -77,13 +77,11 @@ menu,
 menupopup,
 panel,
 button,
+#editBMPanel_namePicker,
+&::part(content), /* extension menu bloat element */
 #editBMPanel_folderMenuList,
 .dialogBox /* e.g. "allow this site to open X link" */
-{ border-radius: 0px !important; }
-
-#editBMPanel_namePicker,
-&::part(content) /* extension menu bloat element */
-{ border: none !important; }
+{ border-radius: 0px !important; border: none !important; }
 
 #editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
 .footer-button > hbox { padding-right: 4px !important; } /* remove/save button spacing */
@@ -99,4 +97,9 @@ button {
     /* there aren't too many `button' elements so users are less used to pressing them */
     height: 26px !important;
     flex-grow: 1 !important; /* why not use space when given it? */
+}
+
+richlistbox { /* "choose application" menu; needs work */
+    border: 0px !important;
+    berder-radius: 0px !important;
 }
