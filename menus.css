@@ -38,6 +38,7 @@ toolbarseparator, /* useless lines in menus */
 #editBookmarkPanelContent > label,
 #context-take-screenshot,
 #tabgroup-preview-panel,
+spacer,
 /* begin context menu stuff */
 menuseparator,
 #context-viewsource,
@@ -51,6 +52,8 @@ menuseparator,
 
 menuitem,
 menu,
+dialog,
+button,
 .footer-button,
 #editBMPanel_namePicker, /* edit bookmark menu */
 .editBMPanel_folderRow, /* edit bookmark location label */
@@ -61,8 +64,10 @@ menu,
 
 menupopup, /* context menu */
 panel, /* other menus */
+button,
 .panel-footer,
 .footer-button,
+description, /* e.g. text on a popup */
 #unified-extensions-manage-extensions, /* addons/extension menu container */
 unified-extensions-item /* ext. menu item */
 { margin: 0px !important; }
@@ -71,7 +76,9 @@ menuitem,
 menu,
 menupopup,
 panel,
-#editBMPanel_folderMenuList
+button,
+#editBMPanel_folderMenuList,
+.dialogBox /* e.g. "allow this site to open X link" */
 { border-radius: 0px !important; }
 
 #editBMPanel_namePicker,
@@ -82,12 +89,14 @@ panel,
 .footer-button > hbox { padding-right: 4px !important; } /* remove/save button spacing */
 .unified-extensions-item { margin-block: 0px !important; } /* vertical margin */
 menuitem, menu { height: 22px !important; } /* okay maybe not THAT compact */
+description { padding: 8px 4px 0px !important; } /* less compact, easier to read */
 
 .unified-extensions-item-action-button,
 #editBMPanel_folderMenuList
 { padding-block: 0px !important; }
 
-.footer-button {
-    margin-top: 0px !important;
-    font-weight: 400 !important;
+button {
+    /* there aren't too many `button' elements so users are less used to pressing them */
+    height: 26px !important;
+    flex-grow: 1 !important; /* why not use space when given it? */
 }
