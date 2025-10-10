@@ -1,0 +1,22 @@
+div.container, /* seems too general but doesn't seem to mess anything up*/
+div.content > div.text-container /* e.g. text on DRM enablement petition */
+{ padding: 0px !important; }
+
+notification-message /* e.g. necessity of DRM enablement banner */
+{ margin: 0px !important; }
+
+label.button-text
+{ padding: 0px 4px !important; } /* if the text's too close to the edge it might fall off */
+
+div.text-container > div.icon-container /* e.g. DRM enablement petition icon */
+{ display: none !important; }
+
+
+div.container  > div.content { /* e.g. DRM enablement petition contents*/
+    margin: 0px 8px !important;
+}
+
+moz-button { /* e.g. the 'X' on the DRM enablement petition */
+    margin: 0px !important;
+    height: 22px !important;
+}
