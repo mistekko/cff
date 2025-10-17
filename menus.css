@@ -50,7 +50,7 @@ menuseparator,
 /* end context menu stuff */
 { display: none !important; }
 
-menuitem,
+arrowscrollbox, /* e.g. context menu */
 menu,
 dialog,
 button,
@@ -58,18 +58,21 @@ button,
 #editBMPanel_namePicker, /* edit bookmark menu */
 .editBMPanel_folderRow, /* edit bookmark location label */
 #editBookmarkPanelContent, /* edit bookmark input box */
+#sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
 .unified-extensions-item-action-button,
 #editBMPanel_folderMenuList
 { padding: 0px !important; }
 
-menupopup, /* context menu */
-panel, /* other menus */
+menupopup, /* e.g. context menu */
+arrowscrollbox,
+panel,
 button,
 .panel-footer,
 .footer-button,
 description, /* e.g. text on a popup */
 #unified-extensions-manage-extensions, /* addons/extension menu container */
-unified-extensions-item /* ext. menu item */
+unified-extensions-item, /* ext. menu item */
+input::-moz-search-clear-button
 { margin: 0px !important; }
 
 menuitem,
@@ -80,7 +83,8 @@ button,
 #editBMPanel_namePicker,
 &::part(content), /* extension menu bloat element */
 #editBMPanel_folderMenuList,
-.dialogBox /* e.g. "allow this site to open X link" */
+.dialogBox, /* e.g. "allow this site to open X link" */
+input::-moz-search-clear-button
 { border-radius: 0px !important; border: none !important; }
 
 #editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
@@ -88,6 +92,9 @@ button,
 .unified-extensions-item { margin-block: 0px !important; } /* vertical margin */
 menuitem, menu { height: 22px !important; } /* okay maybe not THAT compact */
 description { padding: 8px 4px 0px !important; } /* less compact, easier to read */
+menuitem { padding: 0px 4px !important; }
+#viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
+
 
 .unified-extensions-item-action-button,
 #editBMPanel_folderMenuList
@@ -99,7 +106,8 @@ button {
     flex-grow: 1 !important; /* why not use space when given it? */
 }
 
-richlistbox { /* "choose application" menu; needs work */
+richlistbox,
+arrowscrollbox { /* "choose application" menu; needs work */
     border: 0px !important;
     berder-radius: 0px !important;
 }
