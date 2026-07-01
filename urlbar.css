@@ -1,20 +1,43 @@
-:root {
-    --urlbar-icon-padding: 0px !important; /* hig privacy icons */
-    --toolbarbutton-outer-padding: 0px !important;
-    --toolbarbutton-border-radius: 0px !important; /* hover overlay corners */
+ :root {
+    --urlbar-min-height: 24px !important; /* default is 32px */
+    --urlbar-margin-inline: 0px !important; /* prevent it from getting larger when focused */
+    --urlbar-background-shadow: none !important;
+    --urlbar-container-padding: -1px !important;
+    --urlbar-container-border-width: 0px !important;
     --toolbarbutton-outer-padding: 0px !important; /* space beside most buttons */
-    --toolbarbutton-inner-padding: none !important;
+    --toolbarbutton-inner-padding: 4px !important; /* padding around reload button */
+    --toolbarbutton-border-radius: 0px !important; /* hover overlay corners */
     --border-radius-small: 0px !important;
+    --border-radius-medium: 0px !important; /* e.g. the search-engine-selection button*/
     --border-width: 0px !important;
 }
 
-vbox.urlbarView,
+#tracking-protection-icon-box,
+#unified-extensions-button > image:nth-child(1),
+.urlbar-icon,
+.urlbar-input-container > box > box > image,
+.urlbar-input-container > box > box > box  > image,
+image.toolbarbutton-icon { /* reload button */
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.urlbar-go-button, /* `run this search' button */
+.urlbar-visually-hidden, /* some `a' of indeterminate purpose in the urlbar */
+.urlbarView, /* search completions */
 #urlbar-searchmode-switcher,
-#urlbar-go-button,
 #back-button,
 #forward-button
 { display: none !important; }
 
+#identity-box,
+#urlbar-container,
+toolbaritem, /* all sorts of buttons in the toolbar */
+.urlbar-icon,
+.urlbar-input-container > box > box > box  > image
+{ margin: 0px !important; } /* align url box completely to the left */
+
+.urlbar-input-container,
 #nav-bar,
 #navigator-toolbox,
 #urlbar-background
@@ -22,14 +45,16 @@ vbox.urlbarView,
 
 #identity-icon-box, /* search icon in search bar */
 #PanelUI-menu-button,
-#unified-extensions-button > image:nth-child(1)
+.toolbarbutton-badge-stack, /* the padding should be on toolbar-button-icon  */
+.urlbar-input-container,
+.toolbarbutton-1
 { padding: 0px !important; }
 
-#urlbar-container,
-toolbaritem /* all sorts of buttons in the toolbar */
-{ margin: 0px !important; } /* align url box completely to the left */
-
-.urlbar-icon { margin: auto !important; } /* center without using urlbar-icon-padding */
+.toolbarbutton-icon,
+.urlbar-icon,
+.urlbar-input-container > box > box > image,
+.urlbar-input-container > box > box > box  > image
+{ padding: 4px !important; }
 
 toolbar#nav-bar, /* bar containing urlbar */
 #urlbar { /* the uh yeah uh */
@@ -37,14 +62,8 @@ toolbar#nav-bar, /* bar containing urlbar */
     min-height: 24px !important;
 }
 
-image.toolbarbutton-icon {
-    width: 16px !important;
-    height: 16px !important;
-    margin: 4px !important;
-}
-
-#unified-extensions-button > image:nth-child(1) {
-    width: 24px !important;
-    height: 24px !important;
-    margin: auto !important;
-}
+.urlbar-input-box { margin: 4px !important; }
+#page-action-buttons { height: 24px !important; }
+#unified-extensions-button > image:nth-child(1) { margin: auto !important; }
+/* search-engine-selection button */
+#main-button > .button-background > label { padding: 0px 4px 0px 0px !important; }
