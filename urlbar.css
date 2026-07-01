@@ -12,12 +12,13 @@
     --border-width: 0px !important;
 }
 
-#tracking-protection-icon-box,
-#unified-extensions-button > image:nth-child(1),
+image.toolbarbutton-icon,
 .urlbar-icon,
+.urlbar-page-action,
 .urlbar-input-container > box > box > image,
 .urlbar-input-container > box > box > box  > image,
-image.toolbarbutton-icon { /* reload button */
+#tracking-protection-icon-box,
+#unified-extensions-button > image:nth-child(1) { /* reload button */
     width: 24px !important;
     height: 24px !important;
 }
@@ -30,11 +31,19 @@ image.toolbarbutton-icon { /* reload button */
 #forward-button
 { display: none !important; }
 
-#identity-box,
-#urlbar-container,
+.toolbarbutton-1,
+.toolbarbutton-badge-stack, /* the padding should be on toolbar-button-icon  */
+.urlbar-page-action,
+.urlbar-input-container,
+#identity-icon-box, /* search icon in search bar */
+#PanelUI-menu-button
+{ padding: 0px !important; }
+
 toolbaritem, /* all sorts of buttons in the toolbar */
 .urlbar-icon,
-.urlbar-input-container > box > box > box  > image
+.urlbar-input-container > box > box > box  > image,
+#identity-box,
+#urlbar-container
 { margin: 0px !important; } /* align url box completely to the left */
 
 .urlbar-input-container,
@@ -42,13 +51,6 @@ toolbaritem, /* all sorts of buttons in the toolbar */
 #navigator-toolbox,
 #urlbar-background
 { border: none !important; }
-
-#identity-icon-box, /* search icon in search bar */
-#PanelUI-menu-button,
-.toolbarbutton-badge-stack, /* the padding should be on toolbar-button-icon  */
-.urlbar-input-container,
-.toolbarbutton-1
-{ padding: 0px !important; }
 
 .toolbarbutton-icon,
 .urlbar-icon,
@@ -65,5 +67,5 @@ toolbar#nav-bar, /* bar containing urlbar */
 .urlbar-input-box { margin: 4px !important; }
 #page-action-buttons { height: 24px !important; }
 #unified-extensions-button > image:nth-child(1) { margin: auto !important; }
-/* search-engine-selection button */
+/* search-engine-selection arrow looks better if it's a bit closer to the engine's icon */
 #main-button > .button-background > label { padding: 0px 4px 0px 0px !important; }
