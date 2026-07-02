@@ -18,6 +18,7 @@ image.toolbarbutton-icon,
 .urlbar-input-container > box > box > image,
 .urlbar-input-container > box > box > box  > image,
 #tracking-protection-icon-box,
+#trust-icon-container,
 #unified-extensions-button > image:nth-child(1) { /* reload button */
     width: 24px !important;
     height: 24px !important;
@@ -35,6 +36,7 @@ image.toolbarbutton-icon,
 .toolbarbutton-badge-stack, /* the padding should be on toolbar-button-icon  */
 .urlbar-page-action,
 .urlbar-input-container,
+#trust-icon-container,
 #identity-icon-box, /* search icon in search bar */
 #PanelUI-menu-button
 { padding: 0px !important; }
@@ -55,12 +57,18 @@ toolbaritem, /* all sorts of buttons in the toolbar */
 .toolbarbutton-icon,
 .urlbar-icon,
 .urlbar-input-container > box > box > image,
-.urlbar-input-container > box > box > box  > image
+.urlbar-input-container > box > box > box  > image,
+#trust-icon
 { padding: 4px !important; }
 
 toolbar#nav-bar, /* bar containing urlbar */
 #urlbar { /* the uh yeah uh */
     max-height: 24px !important;
+    min-height: 24px !important;
+}
+
+#trust-icon {
+    min-width: 24px !important;
     min-height: 24px !important;
 }
 
