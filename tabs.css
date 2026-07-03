@@ -1,6 +1,7 @@
 :root {
     --tab-block-margin: 0px !important; /* space vertically molesting tabs */
     --tab-overflow-clip-margin: 0px !important; /* space horizontally harassing tabs */
+    --tab-inner-inline-margin: 0px !important;
     --tab-border-radius: 0px !important; /* heals a broken man */
     --tab-inline-padding: 0px !important; /* tab obesity */
     --tab-min-height: 24px !important; /* take a guess */
@@ -15,7 +16,15 @@ stack.tab-icon-stack, /* tab icons */
 .titlebar-spacer
 { display: none !important; }
 
-.tab-label-container { height: 24px !important; }
+.tabbrowser-tab,
+.tab-content
+{ padding: 0px !important; }
+
+button,
+.tab-audio-button,
+.tab-label-container
+{ height: 24px !important; }
+
 .tab-audio-button { margin-inline-end: 0px !important; } /* "mute tab" button */
 .tab-text { padding-left: 4px !important; } /* tab label */
 .titlebar-button { padding: 6px 9px !important; } /* shrink windows controls on windows */
