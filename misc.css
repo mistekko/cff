@@ -1,5 +1,6 @@
 div.container, /* seems too general but doesn't seem to mess anything up*/
 div.content > div.text-container, /* e.g. text on DRM enablement petition */
+.titlebar-button,
 #input /* many if not most input fields */
 { padding: 0px !important; }
 
@@ -13,7 +14,7 @@ label.button-text
 div.text-container > div.icon-container /* e.g. DRM enablement petition icon */
 { display: none !important; }
 
-toolbarbutton { border-radius: 0px !important; } /* many MANY buttons */
+.toolbarbutton-icon { border-radius: 0px !important; }
 div.container  > div.content { margin: 0px 8px !important; }/* e.g. DRM enablement petition contents*/
 
 moz-button { /* e.g. the 'X' on the DRM enablement petition */
