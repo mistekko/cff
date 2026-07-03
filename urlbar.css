@@ -75,5 +75,3 @@ toolbar#nav-bar, /* bar containing urlbar */
 .urlbar-input-box { margin: 4px !important; }
 #page-action-buttons { height: 24px !important; }
 #unified-extensions-button > image:nth-child(1) { margin: auto !important; }
-/* search-engine-selection arrow looks better if it's a bit closer to the engine's icon */
-#main-button > .button-background > label { padding: 0px 4px 0px 0px !important; }
