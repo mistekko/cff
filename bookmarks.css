@@ -4,7 +4,9 @@
 
 #navigator-toolbox { border-bottom: 0px !important; } /* take red pill */
 #PersonalToolbar { padding-inline: 0px !important; }
-toolbarbutton.bookmark-item {
+
+.bookmark-item,
+.openintabs-menuitem {
     margin: 0px !important; /* asphyxiate them */
     height: 24px !important;
 }
