@@ -33,5 +33,6 @@ button,
 /* tested only on Windows as of 10-10-2025 */
 .titlebar-min { content: "-" !important; }
 .titlebar-max { content: "+" !important; }
+.titlebar-restore { content: "+" !important; }
 .titlebar-close { content: "x" !important; }
 .titlebar-button { width: 24px !important; height: 24px !important; }
