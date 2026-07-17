@@ -55,6 +55,7 @@ button,
 #editBMPanel_folderMenuList
 { padding: 0px !important; }
 
+html:slot::part(content),
 menupopup, /* e.g. context menu */
 arrowscrollbox,
 panel,
