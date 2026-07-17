@@ -22,7 +22,9 @@ stack.tab-icon-stack, /* tab icons */
 
 button,
 .tab-audio-button,
-.tab-label-container
+.tab-label-container,
+.toolbar-items,
+#TabsToolbar
 { height: 24px !important; }
 
 .tab-audio-button { margin-inline-end: 0px !important; } /* "mute tab" button */
@@ -32,3 +34,4 @@ button,
 .titlebar-min { content: "-" !important; }
 .titlebar-max { content: "+" !important; }
 .titlebar-close { content: "x" !important; }
+.titlebar-button { width: 24px !important; height: 24px !important; }
