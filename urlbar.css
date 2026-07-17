@@ -43,6 +43,7 @@ image.toolbarbutton-icon,
 { padding: 0px !important; }
 
 toolbaritem, /* all sorts of buttons in the toolbar */
+.toolbarbutton-badge,
 .urlbar-icon,
 .urlbar-input-container > box > box > box  > image,
 #identity-box,
@@ -59,6 +60,7 @@ toolbaritem, /* all sorts of buttons in the toolbar */
 .urlbar-icon,
 .urlbar-input-container > box > box > image,
 .urlbar-input-container > box > box > box  > image,
+#downloads-indicator-icon,
 #trust-icon
 { padding: 4px !important; }
 
