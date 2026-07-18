@@ -1,7 +1,8 @@
 /* menu and dialogue modifications */
 :root {
-    --panel-subview-body-padding-block: 0px !important;
+    --panel-menuitem-padding: 4px !important;
     --panel-separator-margin-horizontal: 0px !important;
+    --panel-subview-body-padding-block: 0px !important;
     --arrowpanel-menuitem-border-radius: 0px !important;
     --arrowpanel-menuitem-margin: 0px !important;
     --arrowpanel-border-radius: 0px !important; /* right-click menu */
@@ -16,21 +17,22 @@
     --focus-outline: none !important;
 }
 
-.subviewbutton > image, /* empty space (icon lacuna) in menus */
 box.panel-header, /* menu header */
-#unified-extensions-view > toolbarseparator:nth-child(2), /* ext. menu line */
-toolbarseparator, /* useless lines in menus */
-#editBMPanel_tagsRow,
-#editBookmarkPanelInfoArea,
-#editBookmarkPanelBottomContent,
-#editBookmarkHeaderSeparator,
-#editBookmarkSeparator,
-#editBMPanel_foldersExpander, /* extra bookmark edit menu button */
-.unified-extensions-item-message-deck, /* "Can always read and change..." */
-#editBookmarkPanelContent > label,
-#context-take-screenshot,
-#tabgroup-preview-panel,
 spacer,
+toolbarseparator, /* useless lines in menus */
+.downloadButton > hbox > .button-text, /* `Show in folder' button */
+.subviewbutton > image, /* empty space (icon lacuna) in menus */
+.unified-extensions-item-message-deck, /* "Can always read and change..." */
+#context-take-screenshot,
+#editBMPanel_foldersExpander, /* extra bookmark edit menu button */
+#editBMPanel_tagsRow,
+#editBookmarkHeaderSeparator,
+#editBookmarkPanelContent > label,
+#editBookmarkPanelBottomContent,
+#editBookmarkPanelInfoArea,
+#editBookmarkSeparator,
+#tabgroup-preview-panel,
+#unified-extensions-view > toolbarseparator:nth-child(2), /* ext. menu line */
 /* begin context menu stuff */
 menuseparator,
 #context-viewsource,
@@ -43,51 +45,74 @@ menuseparator,
 { display: none !important; }
 
 arrowscrollbox, /* e.g. context menu */
-menu,
-dialog,
 button,
-.footer-button,
-#editBMPanel_namePicker, /* edit bookmark menu */
+dialog,
+menu,
+.downloadMainArea,
 .editBMPanel_folderRow, /* edit bookmark location label */
-#editBookmarkPanelContent, /* edit bookmark input box */
-#sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
+.footer-button,
+.permission-popup-section,
+.popup-notification-description,
 .unified-extensions-item-action-button,
-#editBMPanel_folderMenuList
+#downloadsPanel-mainView,
+#editBMPanel_folderMenuList,
+#editBMPanel_namePicker, /* edit bookmark menu */
+#editBookmarkPanelContent, /* edit bookmark input box */
+#permission-popup-permissions-content,
+#sidebar-header /* e.g. history, bookmarks, etc. sidebar */
 { padding: 0px !important; }
 
-html:slot::part(content),
-menupopup, /* e.g. context menu */
 arrowscrollbox,
-panel,
 button,
-.panel-footer,
-.footer-button,
-description, /* e.g. text on a popup */
-#unified-extensions-manage-extensions, /* addons/extension menu container */
+description,
+menupopup,
 unified-extensions-item, /* ext. menu item */
-input::-moz-search-clear-button
+.downloadDetails,
+.downloadTarget,
+.footer-button,
+.panel-footer,
+.permission-popup-permission-item,
+#unified-extensions-manage-extensions /* addons/extension menu container */
 { margin: 0px !important; }
 
+arrowscrollbox /* "choose application" menu; needs work */
+button,
+input::-moz-search-clear-button,
 menuitem,
 menu,
 menupopup,
 panel,
-button,
-#editBMPanel_namePicker,
-&::part(content), /* extension menu bloat element */
-#editBMPanel_folderMenuList,
+richlistbox,
 .dialogBox, /* e.g. "allow this site to open X link" */
-input::-moz-search-clear-button
+#editBMPanel_namePicker,
+#editBMPanel_folderMenuList,
+&::part(content) /* extension menu bloat element */
 { border-radius: 0px !important; border: none !important; }
 
 .unified-extensions-item-action-button,
 #editBMPanel_folderMenuList
 { padding-block: 0px !important; }
 
-richlistbox,
-arrowscrollbox { /* "choose application" menu; needs work */
-    border: 0px !important;
-    berder-radius: 0px !important;
+.downloadDetails,
+.downloadTarget
+{ padding: 2px !important; }
+
+arrowscrollbox, /* "choose application" menu; needs work */
+richlistbox
+{ border: 0px !important; }
+
+menuitem,
+.downloadTypeIcon
+{ padding: 0px 4px !important; }
+
+menuitem,
+menu
+{ height: 22px !important; } /* okay maybe not THAT compact */
+
+.downloadTypeIcon {
+    height: 44px !important;
+    width: 44px !important;
+    margin-top: -3px !important;
 }
 
 menupopup {
@@ -97,10 +122,23 @@ menupopup {
     --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
 }
 
-menuitem, menu { height: 22px !important; } /* okay maybe not THAT compact */
 description { padding: 8px 4px 0px !important; } /* less compact, easier to read */
-menuitem { padding: 0px 4px !important; }
+richlistitem.download-state { padding-inline-end: 0px !important; } /* make `open file location button' flush */
+toolbarbutton { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
+.downloadButton { margin: 0px !important; height: 44px !important; aspect-ratio: 1 !important; }
 .footer-button > hbox { padding-right: 4px !important; } /* remove/save button spacing */
+.permission-popup-permission-remove-button > hbox > image { margin-right: 4px !important; }
+.popup-notification-body-container { padding: 0px 0px 0px 4px !important; }
+.popup-notification-description { padding-top: 4px !important; }
 .unified-extensions-item { margin-block: 0px !important; } /* vertical margin */
+.unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
 #editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
 #viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
+#downloadsListBox > richlistitem { min-height: 0px !important; }
+
+/* replace with text that doesn't get line-wrapped*/
+#permission-popup-permission-label-media-key-system-access-0 { font-size: 0px !important; }
+#permission-popup-permission-label-media-key-system-access-0:before {
+    content: "Play DRM-locked content" !important;
+    font-size: 14px !important;
+}
