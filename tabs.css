@@ -28,6 +28,8 @@ button,
 { height: 24px !important; }
 
 .tab-audio-button { margin-inline-end: 0px !important; } /* "mute tab" button */
+.tab-preview-content-interactive { padding: 0px !important; }
+.tab-preview-text-container { margin: 0px !important; }
 .tab-text { padding-left: 4px !important; } /* tab label */
 .titlebar-button { padding: 6px 9px !important; } /* shrink windows controls on windows */
 /* tested only on Windows as of 10-10-2025 */
