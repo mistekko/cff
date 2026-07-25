@@ -59,7 +59,8 @@ menu,
 #editBMPanel_namePicker, /* edit bookmark menu */
 #editBookmarkPanelContent, /* edit bookmark input box */
 #permission-popup-permissions-content,
-#sidebar-header /* e.g. history, bookmarks, etc. sidebar */
+#sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
+#trustpanel-header-row
 { padding: 0px !important; }
 
 arrowscrollbox,
@@ -72,6 +73,9 @@ unified-extensions-item, /* ext. menu item */
 .footer-button,
 .panel-footer,
 .permission-popup-permission-item,
+#trustpanel-blocker-section,
+#trustpanel-header-section > vbox,
+#trustpanel-privacy-link,
 #unified-extensions-manage-extensions /* addons/extension menu container */
 { margin: 0px !important; }
 
@@ -109,6 +113,14 @@ menuitem,
 menu
 { height: 22px !important; } /* okay maybe not THAT compact */
 
+#trustpanel-header-row,
+#trustpanel-header-section > vbox,
+#trustpanel-header-section > toolbarbutton
+{ height: 24px !important; }
+
+#trustpanel-privacy-link
+{ height: 16px !important; }
+
 .downloadTypeIcon {
     height: 44px !important;
     width: 44px !important;
@@ -122,7 +134,8 @@ menupopup {
     --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
 }
 
-description { padding: 8px 4px 0px !important; } /* less compact, easier to read */
+description { padding: 4px 4px 0px !important; } /* less compact, easier to read */
+moz-toggle { --toggle-width: 40px !important;  }
 richlistitem.download-state { padding-inline-end: 0px !important; } /* make `open file location button' flush */
 toolbarbutton { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
 .downloadButton { margin: 0px !important; height: 44px !important; aspect-ratio: 1 !important; }
@@ -130,11 +143,17 @@ toolbarbutton { width: unset !important; } /* random buttons have random widths 
 .permission-popup-permission-remove-button > hbox > image { margin-right: 4px !important; }
 .popup-notification-body-container { padding: 0px 0px 0px 4px !important; }
 .popup-notification-description { padding-top: 4px !important; }
+.toggle-button { height: 20px !important; margin-top: 2px !important; } /* they shouldn't hog the entire line-height */
 .unified-extensions-item { margin-block: 0px !important; } /* vertical margin */
 .unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
-#editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
-#viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
 #downloadsListBox > richlistitem { min-height: 0px !important; }
+#editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
+#trustpanel-header-section > * { padding-left: 4px !important; }
+#viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
+
+#identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
+#identity-popup-allow-sitedata-button > label:before { content: "Always store this site's cookies" !important; font-size: 14px !important; }
+
 
 /* replace with text that doesn't get line-wrapped*/
 #permission-popup-permission-label-media-key-system-access-0 { font-size: 0px !important; }
