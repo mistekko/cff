@@ -1,5 +1,5 @@
 /* menu and dialogue modifications */
-:root {
+:root, #contentAreaContextMenu  {
     --panel-menuitem-padding: 4px !important;
     --panel-separator-margin-horizontal: 0px !important;
     --panel-subview-body-padding-block: 0px !important;
@@ -107,6 +107,7 @@ arrowscrollbox, /* "choose application" menu; needs work */
 richlistbox
 { border: 0px !important; }
 
+menu,
 menuitem,
 .downloadTypeIcon
 { padding: 0px 4px !important; }
@@ -136,22 +137,24 @@ menupopup {
     --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
 }
 
-description { padding: 4px 4px 0px !important; } /* less compact, easier to read */
-moz-toggle { --toggle-width: 40px !important; }
-richlistitem.download-state { padding-inline-end: 0px !important; } /* make `open file location button' flush */
-toolbarbutton { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
+/* it's not clear whether this does anything at all. */
+/* .footer-button > hbox { padding-right: 4px !important; } remove/save button spacing */
+
+description     { padding: 4px 4px 0px !important; } /* less compact, easier to read */
+moz-toggle      { --toggle-width: 40px !important;  }
+toolbarbutton   { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
+.button-icon    { margin-right: 4px !important; } /* `x' in permission popup */
+.download-state { padding-right: 0px !important; } /* make `open file location button' flush */
 .downloadButton { margin: 0px !important; height: 44px !important; aspect-ratio: 1 !important; }
-.footer-button > hbox { padding-right: 4px !important; } /* remove/save button spacing */
-.permission-popup-permission-remove-button > hbox > image { margin-right: 4px !important; }
-.popup-notification-body-container { padding: 0px 0px 0px 4px !important; }
-.popup-notification-description { padding-top: 4px !important; }
-.toggle-button { height: 20px !important; margin-top: 2px !important; } /* they shouldn't hog the entire line-height */
-.unified-extensions-item { margin-block: 0px !important; } /* vertical margin */
+.toggle-button  { height: 20px !important; margin-top: 2px !important; } /* they shouldn't hog the entire line-height */
+.popup-notification-body-container     { padding: 0px 0px 0px 4px !important; }
+.popup-notification-description        { padding-top: 4px !important; }
+.unified-extensions-item               { margin-block: 0px !important; } /* vertical margin */
 .unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
-#downloadsListBox > richlistitem { min-height: 0px !important; }
-#editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
+#downloadsListBox > richlistitem       { min-height: 0px !important; }
+#editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
-#trustpanel-header-section > * { padding-left: 4px !important; }
+#trustpanel-header-section > *         { padding-left: 4px !important; }
 #viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
 
 /* replace with text that doesn't get line-wrapped*/
