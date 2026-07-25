@@ -11,6 +11,7 @@ toolbarbutton#alltabs-button, /* remove tab list dropdown */
 toolbarbutton#scrollbutton-down, /* tab (horizontal) scroll button */
 toolbarbutton#scrollbutton-up, /* the above */
 stack.tab-icon-stack, /* tab icons */
+#sidebar-launcher-splitter,
 #tabbrowser-arrowscrollbox-periphery, /* new tab button */
 .tab-close-button, /* close tab button */
 .titlebar-spacer
