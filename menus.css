@@ -31,6 +31,8 @@ toolbarseparator, /* useless lines in menus */
 #editBookmarkPanelBottomContent,
 #editBookmarkPanelInfoArea,
 #editBookmarkSeparator,
+#permission-popup-storage-access-permission-list-header > hbox > a,
+#permission-popup-storage-access-permission-list-hint,
 #tabgroup-preview-panel,
 #unified-extensions-view > toolbarseparator:nth-child(2), /* ext. menu line */
 /* begin context menu stuff */
@@ -135,7 +137,7 @@ menupopup {
 }
 
 description { padding: 4px 4px 0px !important; } /* less compact, easier to read */
-moz-toggle { --toggle-width: 40px !important;  }
+moz-toggle { --toggle-width: 40px !important; }
 richlistitem.download-state { padding-inline-end: 0px !important; } /* make `open file location button' flush */
 toolbarbutton { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
 .downloadButton { margin: 0px !important; height: 44px !important; aspect-ratio: 1 !important; }
@@ -148,14 +150,16 @@ toolbarbutton { width: unset !important; } /* random buttons have random widths 
 .unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
 #downloadsListBox > richlistitem { min-height: 0px !important; }
 #editBookmarkPanelDoneButton { background-color: var(--button-background-color) !important; }
+#permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
 #trustpanel-header-section > * { padding-left: 4px !important; }
 #viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
 
-#identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
-#identity-popup-allow-sitedata-button > label:before { content: "Always store this site's cookies" !important; font-size: 14px !important; }
-
-
 /* replace with text that doesn't get line-wrapped*/
+#identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
+#identity-popup-allow-sitedata-button > label:before {
+    content: "Always store this site's cookies" !important;
+    font-size: 14px !important;
+}
 #permission-popup-permission-label-media-key-system-access-0 { font-size: 0px !important; }
 #permission-popup-permission-label-media-key-system-access-0:before {
     content: "Play DRM-locked content" !important;
