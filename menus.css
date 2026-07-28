@@ -1,5 +1,5 @@
 /* menu and dialogue modifications */
-:root, #contentAreaContextMenu  {
+:root, #toolbar-context-menu, menupopup {
     --panel-menuitem-padding: 4px !important;
     --panel-separator-margin-horizontal: 0px !important;
     --panel-subview-body-padding-block: 0px !important;
@@ -141,6 +141,7 @@ menupopup {
 /* .footer-button > hbox { padding-right: 4px !important; } remove/save button spacing */
 
 description     { padding: 4px 4px 0px !important; } /* less compact, easier to read */
+menupopup > *   { padding-left: 4px !important; }
 moz-toggle      { --toggle-width: 40px !important;  }
 toolbarbutton   { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
 .button-icon    { margin-right: 4px !important; } /* `x' in permission popup */
