@@ -19,7 +19,7 @@ div.container  > div.content { margin: 0px 8px !important; }/* e.g. DRM enableme
 
 moz-button { /* e.g. the 'X' on the DRM enablement petition */
     margin: 0px !important;
-    height: 22px !important;
+    height: 24px !important;
 }
 
 #input {

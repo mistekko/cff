@@ -1,9 +1,15 @@
- :root {
+:root {
     --urlbar-min-height: 24px !important; /* default is 32px */
     --urlbar-margin-inline: 0px !important; /* prevent it from getting larger when focused */
     --urlbar-background-shadow: none !important;
+    --urlbar-background-border-radius: 0px !important;
+    --urlbar-background-outline-focused: 0px !important;
     --urlbar-container-padding: -1px !important;
     --urlbar-container-border-width: 0px !important;
+    --urlbar-input-container-border-width: 0px !important;
+    --urlbar-input-container-padding: 0px !important;
+    --urlbarview-border-radius: 0px !important;
+    --focus-outline-width: 0px !important;
     --toolbarbutton-outer-padding: 0px !important; /* space beside most buttons */
     --toolbarbutton-inner-padding: 4px !important; /* padding around reload button */
     --toolbarbutton-border-radius: 0px !important; /* hover overlay corners */
@@ -33,6 +39,7 @@ image.toolbarbutton-icon,
 #forward-button
 { display: none !important; }
 
+.identity-box-button,
 .toolbarbutton-1,
 .toolbarbutton-badge-stack, /* the padding should be on toolbar-button-icon  */
 .urlbar-page-action,
@@ -50,10 +57,10 @@ toolbaritem, /* all sorts of buttons in the toolbar */
 #urlbar-container
 { margin: 0px !important; } /* align url box completely to the left */
 
+.urlbar-background,
 .urlbar-input-container,
 #nav-bar,
-#navigator-toolbox,
-#urlbar-background
+#navigator-toolbox
 { border: none !important; }
 
 .toolbarbutton-icon,
@@ -75,6 +82,6 @@ toolbar#nav-bar, /* bar containing urlbar */
     min-height: 24px !important;
 }
 
-.urlbar-input-box { margin: 4px !important; }
+.urlbar-input-box { margin: 3px !important; }
 #page-action-buttons { height: 24px !important; }
 #unified-extensions-button > image:nth-child(1) { margin: auto !important; }
