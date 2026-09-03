@@ -47,7 +47,6 @@ menuseparator,
 { display: none !important; }
 
 arrowscrollbox, /* e.g. context menu */
-button,
 dialog,
 menu,
 .downloadMainArea,
@@ -94,6 +93,24 @@ richlistbox,
 #editBMPanel_folderMenuList,
 &::part(content) /* extension menu bloat element */
 { border-radius: 0px !important; border: none !important; }
+
+
+/*
+ * The icons for these menuitems are backgrounds on buttons
+ * Instead of separate images. To bo honest I'm not exactly
+ * sure why this causes them to be aligned properly, but it
+ * does
+ */
+.searchmode-switcher-installed,
+.searchmode-switcher-addEngine,
+.searchmode-switcher-local,
+.searchmode-switcher-panel-search-settings-button {
+    margin-inline: -4px !important;
+    --panel-menuitem-padding-inline: 6px !important;
+}
+.searchmode-switcher-panel-description,
+#searchmode-switcher-panel-list-urlbar > hr
+{ margin: 0px !important; }
 
 .unified-extensions-item-action-button,
 #editBMPanel_folderMenuList
