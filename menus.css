@@ -173,6 +173,7 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 #editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
 #trustpanel-header-section > *         { padding-left: 4px !important; }
+#trustpanel-header-section             { padding: 0px !important }
 #viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
 
 /* replace with text that doesn't get line-wrapped*/

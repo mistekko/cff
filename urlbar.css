@@ -18,6 +18,10 @@
     --border-width: 0px !important;
 }
 
+.urlbar-background {
+    --urlbar-background-box-shadow-breakout: none !important;
+}
+
 .toolbarbutton-badge-stack,
 image.toolbarbutton-icon,
 .urlbar-icon,
