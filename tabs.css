@@ -13,6 +13,7 @@
 toolbarbutton#alltabs-button, /* remove tab list dropdown */
 toolbarbutton#scrollbutton-down, /* tab (horizontal) scroll button */
 toolbarbutton#scrollbutton-up, /* the above */
+#ai-window-splitter,
 #sidebar-launcher-splitter,
 #tabbrowser-arrowscrollbox-periphery, /* new tab button */
 .tab-close-button, /* close tab button */
@@ -37,7 +38,7 @@ button,
 .tab-icon-stack { display: var(--display-tab-icons) !important }
 .tab-preview-content-interactive { padding: 0px !important; }
 .tab-preview-text-container { margin: 0px !important; }
-.tab-text { padding-left: 4px !important; } /* tab label */
+.tab-text { padding-left: 4px; } /* tab label */
 .titlebar-button { padding: 6px 9px !important; } /* shrink windows controls on windows */
 /* tested only on Windows as of 10-10-2025 */
 .titlebar-min { content: "-" !important; }
@@ -50,13 +51,27 @@ button,
 #sidebar-tools-and-extensions-splitter { display: none !important; }
 #tabbrowser-tabs { grid-gap: 0px !important; border-bottom: 0px !important; }
 
-#tabbrowser-tabs:not([expanded]) { --display-tab-icons: grid; }
+#tabbrowser-tabs:not([expanded])
+#tabbrowser-arrowscrollbox[orient=vertical]
+{ --display-tab-icons: grid; }
+
 #tabbrowser-arrowscrollbox:not([scrolledtoend]) {
     ~ #vertical-tabs-newtab-button {
         box-shadow: 0px 0px 30px;
+        /* ensure tab scroll shadows show over tab background */
+        z-index: 99 !important;
+        margin-top: 1px !important;
     }
 }
-#navigator-toolbox { box-shadow: var(--vertical-tabs-start-shadow) }
 :root:has(#tabbrowser-arrowscrollbox:not([scrolledtostart])) {
     --vertical-tabs-start-shadow: 0px 0px 30px !important;
+}
+#navigator-toolbox {
+    /* ensure tab scroll shadows show over tab background */
+    box-shadow: var(--vertical-tabs-start-shadow);
+    z-index: 99 !important;
+}
+#tabbrowser-tabbox {
+    /* ensure upper tab scroll shadow doesn't overlay webpages */
+    z-index: 100 !important;
 }

@@ -1,0 +1,91 @@
+body            { background-color: rgb(224, 223, 222); }
+.tab-text       { padding-inline: 8px; }
+.tabbrowser-tab { --tab-overflow-clip-margin: 1px; }
+
+.tab-stack {
+    background-image: linear-gradient(
+        #fcfcfc,
+        #f2f2f2 1px,
+        #ebebeb 50%,
+        #dcdcdc 50%,
+        #cfcfcf -1px /* I don't know whether this actually works */
+    );
+}
+
+#tabbrowser-arrowscrollbox {
+    --tab-border: 1px solid #707070;
+    &[orient="vertical"] {
+        /*
+         * set the top-side border for just the first tab
+         * and, later, the bottom-side border for all tabs,
+         * ensuring no redundant borders
+         */
+        :nth-child(1) > .tab-stack {
+            border-top: var(--tab-border);
+        }
+        .tabbrowser-tab {
+            &:not(:is([selected])) {
+                margin-inline-end: 8px !important;
+                .tab-stack {
+                    border-bottom: var(--tab-border);
+                    border-right:  var(--tab-border);
+                    border-left:   var(--tab-border);
+                }
+            }
+            &:is([selected]) {
+                outline: var(--tab-border);
+                margin-inline-end: 7px !important;
+                /*
+                 * since we're raising the new-tab button's z-level in order
+                 * for its shadow to show over the tab's background, we need
+                 * to add a bit of a margin so that the new-tab button doesn't
+                 * overlap the last tab's outline when
+                 */
+                margin-bottom: 1px !important;
+            }
+        }
+    }
+    &[orient="horizontal"] {
+        :nth-child(1) > .tab-stack {
+            border-top: var(--tab-border);
+        }
+        .tabbrowser-tab {
+            &:not(:is([selected])) {
+                .tab-audio-button {
+                    margin-top: -2px !important;
+                    --button-size-icon-small: 22px !important;
+                }
+                .tab-stack {
+                    max-height: 22px !important;
+                    /*
+                     * put this here instead of directly under .tabbrowser-tab
+                     * to ensure that clicking the margin still selects the tab
+                     */
+                    margin-top: 2px !important;
+                    border-top:    var(--tab-border);
+                    border-bottom: var(--tab-border);
+                    border-right:  var(--tab-border);
+                }
+                .tab-label-container {
+                    margin-top: -4px;
+                }
+            }
+            &:is([selected]) {
+                /*
+                 * to be honest, I'm not sure why this is necessary
+                 * for the selected tab's outline to be visible over
+                 * its adjacent tabs here but not w/ vertical tabs.
+                 */
+                z-index: 1;
+                .tab-stack {
+                    outline: var(--tab-border);
+                    max-height: 23px;
+                    margin-top: 1px;
+                }
+                .tab-label-container {
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+}
