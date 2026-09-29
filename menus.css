@@ -154,10 +154,24 @@ menupopup {
     --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
 }
 
+.dialog-button-box > button { /* bottuns in pop-up dialogues */
+    min-width: 90px !important;
+    padding: 0px !important;
+    justify-content: center !important;
+}
+
+#titleContainer { /* title in popup dialogues */
+    /* Seems to always be the unset-favicon icon */
+    > .titleIcon { display: none !important }
+    margin: 0px !important;
+    padding: 8px !important; /* the icon adds 4px */
+    --grid-padding: 8px !important;
+}
+
 /* it's not clear whether this does anything at all. */
 /* .footer-button > hbox { padding-right: 4px !important; } remove/save button spacing */
 
-description     { padding: 4px 4px 0px !important; } /* less compact, easier to read */
+description     { padding: 8px 8px 0px !important; } /* less compact, easier to read */
 menupopup > *   { padding-left: 4px !important; }
 moz-toggle      { --toggle-width: 40px !important;  }
 toolbarbutton   { width: unset !important; } /* random buttons have random widths set, which is not acceptable */
@@ -169,12 +183,14 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 .popup-notification-description        { padding-top: 4px !important; }
 .unified-extensions-item               { margin-block: 0px !important; } /* vertical margin */
 .unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
+#commonDialogWindow { width: auto !important  }
 #downloadsListBox > richlistitem       { min-height: 0px !important; }
 #editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
+#infoBody       { flex-shrink: 0 !important; } /* prevents pointless y-overflow in dialogue popups */
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
 #trustpanel-header-section > *         { padding-left: 4px !important; }
 #trustpanel-header-section             { padding: 0px !important }
-#viewButton { flex-grow: 0 !important; } /* e.g. in history sidebar */
+#viewButton     { flex-grow: 0 !important; } /* e.g. in history sidebar */
 
 /* replace with text that doesn't get line-wrapped*/
 #identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
