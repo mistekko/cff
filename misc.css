@@ -22,7 +22,35 @@ moz-button { /* e.g. the 'X' on the DRM enablement petition */
     height: 24px !important;
 }
 
+
+:root {
+    --button-size-icon: 16px !important;
+    --button-padding-icon: 4px !important;
+}
+
 #input {
-    height: 26px;
+    height: 24px;
     flex-grow: 4 !important;
 }
+.button-background {
+    background-size: 24px !important;
+}
+.options-container {
+    >  * {
+        height: 24px !important;
+    }
+    > :nth-child(2) {
+        width: 24px !important;
+    }
+}
+.sidebar-panel {
+    padding: 0px !important;
+    > sidebar-panel-header {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+}
+.sidebar-panel-heading { margin: 0px !important; }
+.sidebar-panel-title { margin: 0px !important; }
+.sidebar-panel-scrollable-content { padding: 0px !important; }
+.site-card { margin-top: 4px !important; }
