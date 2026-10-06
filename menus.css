@@ -63,7 +63,8 @@ menu,
 #permission-popup-permissions-content,
 #sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
 #trustpanel-clear-cookies-button,
-#trustpanel-header-row
+#trustpanel-header-row,
+#trustpanel-header-section
 { padding: 0px !important; }
 
 arrowscrollbox,
@@ -97,7 +98,6 @@ richlistbox,
 &::part(content) /* extension menu bloat element */
 { border-radius: 0px !important; border: none !important; }
 
-
 /*
  * The icons for these menuitems are backgrounds on buttons
  * Instead of separate images. To bo honest I'm not exactly
@@ -115,8 +115,22 @@ richlistbox,
 #searchmode-switcher-panel-list-urlbar > hr
 { margin: 0px !important; }
 
-.unified-extensions-item-action-button
-{ padding-block: 0px !important; }
+/* replace with text that doesn't get line-wrapped*/
+#identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
+#identity-popup-allow-sitedata-button > label:before {
+    content: "Always store this site's cookies" !important;
+    font-size: 14px !important;
+}
+#permission-popup-permission-label-media-key-system-access-0 { font-size: 0px !important; }
+#permission-popup-permission-label-media-key-system-access-0:before {
+    content: "Play DRM-locked content" !important;
+    font-size: 14px !important;
+}
+
+menu,
+menuitem,
+.downloadTypeIcon
+{ padding: 0px 4px !important; }
 
 .downloadDetails,
 .downloadTarget
@@ -126,11 +140,6 @@ arrowscrollbox, /* "choose application" menu; needs work */
 richlistbox
 { border: 0px !important; }
 
-menu,
-menuitem,
-.downloadTypeIcon
-{ padding: 0px 4px !important; }
-
 #editBMPanel_folderMenuList,
 #editBMPanel_namePicker
 { padding: 3px !important; }
@@ -139,16 +148,10 @@ menuitem,
 menu
 { height: 22px !important; } /* okay maybe not THAT compact */
 
-#trustpanel-header-section  {
-    label {
-        height: 16px !important;
-        margin-block: 4px !important;
-        margin-inline: 0px !important;
-    }
-    .subviewbutton { padding: 0px 4px !important; }
-    & > * > * {
-        padding-left: 4px !important;
-    }
+.unified-extensions-item-action-button {
+    /* make lines in extension menu take the full width */
+    min-width: 100% !important;
+    padding-block: 0px !important;
 }
 
 .downloadTypeIcon {
@@ -157,17 +160,17 @@ menu
     margin-top: -3px !important;
 }
 
+.dialog-button-box > button { /* bottuns in pop-up dialogues */
+    min-width: 90px !important;
+    padding: 0px !important;
+    justify-content: center !important;
+}
+
 menupopup {
     color-scheme: dark !important;
     --panel-background: var(--arrowpanel-background) !important;
     --panel-color: var(--arrowpanel-color) !important;
     --menuitem-disabled-hover-background-color: var(--button-background-color-hover) !important;
-}
-
-.dialog-button-box > button { /* bottuns in pop-up dialogues */
-    min-width: 90px !important;
-    padding: 0px !important;
-    justify-content: center !important;
 }
 
 #titleContainer { /* title in popup dialogues */
@@ -185,10 +188,16 @@ menupopup {
     --toggle-dot-width: 16px !important;
 }
 
-/* it's not clear whether this does anything at all. */
-/* .footer-button > hbox { padding-right: 4px !important; } remove/save button spacing */
+#trustpanel-header-section  {
+    label {
+        height: 16px !important;
+        margin-block: 4px !important;
+        margin-inline: 0px !important;
+    }
+    .subviewbutton { padding: 0px 4px !important; }
+    & > * > * {padding-left: 4px !important;}
+}
 
-#trustpanel-blocker-see-all { --button-padding: 3px !important; } /* crude, but easier than placing anal probes in shadow root */
 description     { padding: 8px 8px 0px !important; } /* less compact, easier to read */
 menupopup > *   { padding-left: 4px !important; }
 moz-toggle      { --toggle-width: 40px !important; }
@@ -203,25 +212,12 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 .popup-notification-description        { padding-top: 4px !important; font-weight: normal !important; }
 .popup-notification-icon               { margin-top: 4px !important; }
 .unified-extensions-item               { margin-block: 0px !important; } /* vertical margin */
-.unified-extensions-item-action-button { min-width: 100% !important; } /* make lines in extension menu take the full width */
-#commonDialogWindow { width: auto !important  }
+#commonDialogWindow                    { width: auto !important }
 #downloadsListBox > richlistitem       { min-height: 0px !important; }
-#editBMPanel_folderTreeRow             {padding: 8px !important;} /* entire list of possible folders,  */
-#editBMPanel_newFolderBox { flex-direction: row-reverse; }
+#editBMPanel_folderTreeRow             { padding: 8px !important;} /* entire list of possible folders,  */
+#editBMPanel_newFolderBox              { flex-direction: row-reverse; }
 #editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
 #infoBody       { flex-shrink: 0 !important; } /* prevents pointless y-overflow in dialogue popups */
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
-#trustpanel-header-section             { padding: 0px !important }
+#trustpanel-blocker-see-all            { --button-padding: 3px !important; } /* crude, but easier than placing anal probes in shadow root */
 #viewButton     { flex-grow: 0 !important; } /* e.g. in history sidebar */
-
-/* replace with text that doesn't get line-wrapped*/
-#identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
-#identity-popup-allow-sitedata-button > label:before {
-    content: "Always store this site's cookies" !important;
-    font-size: 14px !important;
-}
-#permission-popup-permission-label-media-key-system-access-0 { font-size: 0px !important; }
-#permission-popup-permission-label-media-key-system-access-0:before {
-    content: "Play DRM-locked content" !important;
-    font-size: 14px !important;
-}
