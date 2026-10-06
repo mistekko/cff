@@ -59,8 +59,10 @@ menu,
 #editBMPanel_namePicker, /* edit bookmark menu */
 #editBMPanel_newFolderBox,
 #editBookmarkPanelContent, /* edit bookmark input box */
+#identity-popup-allow-sitedata-button,
 #permission-popup-permissions-content,
 #sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
+#trustpanel-clear-cookies-button,
 #trustpanel-header-row
 { padding: 0px !important; }
 
@@ -75,6 +77,7 @@ unified-extensions-item, /* ext. menu item */
 .panel-footer,
 .permission-popup-permission-item,
 #trustpanel-blocker-section,
+#trustpanel-blocker-section-header,
 #trustpanel-header-section > vbox,
 #trustpanel-privacy-link,
 #unified-extensions-manage-extensions /* addons/extension menu container */
@@ -136,13 +139,17 @@ menuitem,
 menu
 { height: 22px !important; } /* okay maybe not THAT compact */
 
-#trustpanel-header-row,
-#trustpanel-header-section > vbox,
-#trustpanel-header-section > toolbarbutton
-{ height: 24px !important; }
-
-#trustpanel-privacy-link
-{ height: 16px !important; }
+#trustpanel-header-section  {
+    label {
+        height: 16px !important;
+        margin-block: 4px !important;
+        margin-inline: 0px !important;
+    }
+    .subviewbutton { padding: 0px 4px !important; }
+    & > * > * {
+        padding-left: 4px !important;
+    }
+}
 
 .downloadTypeIcon {
     height: 44px !important;
@@ -164,16 +171,24 @@ menupopup {
 }
 
 #titleContainer { /* title in popup dialogues */
-    /* Seems to always be the unset-favicon icon */
-    > .titleIcon { display: none !important }
+    > .titleIcon { display: none !important }  /* Seems to invariably  be the unset-favicon icon */
     margin: 0px !important;
     padding: 8px !important; /* the icon adds 4px */
     --grid-padding: 8px !important;
 }
 
+.toggle-button {
+    height: 20px !important; /* they they should be tall without taking the whole line*/
+    margin-block: 2px !important;
+    margin-inline: 4px !important;
+    --toggle-dot-height: 16px !important;
+    --toggle-dot-width: 16px !important;
+}
+
 /* it's not clear whether this does anything at all. */
 /* .footer-button > hbox { padding-right: 4px !important; } remove/save button spacing */
 
+#trustpanel-blocker-see-all { --button-padding: 3px !important; } /* crude, but easier than placing anal probes in shadow root */
 description     { padding: 8px 8px 0px !important; } /* less compact, easier to read */
 menupopup > *   { padding-left: 4px !important; }
 moz-toggle      { --toggle-width: 40px !important; }
@@ -182,12 +197,13 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 .button-icon    { margin-right: 4px !important; } /* `x' in permission popup */
 .download-state { padding-right: 0px !important; } /* make `open file location button' flush */
 .downloadButton { margin: 0px !important; height: 44px !important; aspect-ratio: 1 !important; }
-.toggle-button  { height: 20px !important; margin-top: 2px !important; } /* they shouldn't hog the entire line-height */
+.footer-button  { flex: 1 !important; }
+.permission-popup-permission-icon      { margin: 2.75px !important; }
 .popup-notification-body-container     { padding: 0px 0px 0px 4px !important; }
 .popup-notification-description        { padding-top: 4px !important; font-weight: normal !important; }
 .popup-notification-icon               { margin-top: 4px !important; }
 .unified-extensions-item               { margin-block: 0px !important; } /* vertical margin */
-.unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
+.unified-extensions-item-action-button { min-width: 100% !important; } /* make lines in extension menu take the full width */
 #commonDialogWindow { width: auto !important  }
 #downloadsListBox > richlistitem       { min-height: 0px !important; }
 #editBMPanel_folderTreeRow             {padding: 8px !important;} /* entire list of possible folders,  */
@@ -195,7 +211,6 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 #editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
 #infoBody       { flex-shrink: 0 !important; } /* prevents pointless y-overflow in dialogue popups */
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
-#trustpanel-header-section > *         { padding-left: 4px !important; }
 #trustpanel-header-section             { padding: 0px !important }
 #viewButton     { flex-grow: 0 !important; } /* e.g. in history sidebar */
 
