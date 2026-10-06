@@ -56,8 +56,8 @@ menu,
 .popup-notification-description,
 .unified-extensions-item-action-button,
 #downloadsPanel-mainView,
-#editBMPanel_folderMenuList,
 #editBMPanel_namePicker, /* edit bookmark menu */
+#editBMPanel_newFolderBox,
 #editBookmarkPanelContent, /* edit bookmark input box */
 #permission-popup-permissions-content,
 #sidebar-header, /* e.g. history, bookmarks, etc. sidebar */
@@ -112,8 +112,7 @@ richlistbox,
 #searchmode-switcher-panel-list-urlbar > hr
 { margin: 0px !important; }
 
-.unified-extensions-item-action-button,
-#editBMPanel_folderMenuList
+.unified-extensions-item-action-button
 { padding-block: 0px !important; }
 
 .downloadDetails,
@@ -128,6 +127,10 @@ menu,
 menuitem,
 .downloadTypeIcon
 { padding: 0px 4px !important; }
+
+#editBMPanel_folderMenuList,
+#editBMPanel_namePicker
+{ padding: 3px !important; }
 
 menuitem,
 menu
@@ -187,6 +190,8 @@ toolbarbutton   { width: unset !important; } /* random buttons have random width
 .unified-extensions-item-action-button { min-width: 100% !important; margin-left: 4xp !important; } /* make lines in extension menu take the full width */
 #commonDialogWindow { width: auto !important  }
 #downloadsListBox > richlistitem       { min-height: 0px !important; }
+#editBMPanel_folderTreeRow             {padding: 8px !important;} /* entire list of possible folders,  */
+#editBMPanel_newFolderBox { flex-direction: row-reverse; }
 #editBookmarkPanelDoneButton           { background-color: var(--button-background-color) !important; }
 #infoBody       { flex-shrink: 0 !important; } /* prevents pointless y-overflow in dialogue popups */
 #permission-popup-storage-access-permission-list-header { margin-block: 1.25px !important; } /* easier than fixing the strange font size Mozilla used */
