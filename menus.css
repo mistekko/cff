@@ -104,16 +104,13 @@ richlistbox,
  * sure why this causes them to be aligned properly, but it
  * does
  */
-.searchmode-switcher-installed,
-.searchmode-switcher-addEngine,
-.searchmode-switcher-local,
-.searchmode-switcher-panel-search-settings-button {
-    margin-inline: -4px !important;
-    --panel-menuitem-padding-inline: 6px !important;
-}
 .searchmode-switcher-panel-description,
 #searchmode-switcher-panel-list-urlbar > hr
 { margin: 0px !important; }
+#searchmode-switcher-panel-list-urlbar {
+    --panel-menuitem-padding-block: 3px 5px !important;
+    --panel-menuitem-padding-inline: 4px !important;
+}
 
 /* replace with text that doesn't get line-wrapped*/
 #identity-popup-allow-sitedata-button > label { font-size: 0px !important; }
