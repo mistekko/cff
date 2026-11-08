@@ -64,6 +64,7 @@ button,
 }
 
 .tab-audio-button   { margin-inline-end: 0px !important; } /* "mute tab" button */
+.tab-background { border: none !important; margin: 0px !important; }
 .tab-icon-image     { margin: 4px !important; }
 .tab-icon-stack     { display: var(--display-tab-icons) !important }
 .tab-preview-text-container             { margin: 0px !important; }
